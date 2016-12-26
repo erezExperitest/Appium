@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="jcommander">
     <CLASSES>
-      <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/jcommander.jar!/" />
-      <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng-plugin.jar!/" />
-      <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng/lib/jcommander.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng/lib/testng-plugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng/lib/testng.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

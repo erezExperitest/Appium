@@ -17,10 +17,10 @@ public class CalculatorAndroid {
     public void setUp() throws MalformedURLException{
         //Set up desired capabilities and pass the Android app-activity and app-package to Appium
         DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("BROWSER_NAME", "Android");
-//        capabilities.setCapability("VERSION", "4.4.2");
-//        capabilities.setCapability("deviceName","Emulator");
-//        capabilities.setCapability("platformName","Android");
+        capabilities.setCapability("BROWSER_NAME", "Android");
+        capabilities.setCapability("VERSION", "4.4.2");
+        capabilities.setCapability("deviceName","Emulator");
+        capabilities.setCapability("platformName","Android");
 
 
         capabilities.setCapability("appPackage", "com.android.calculator2");

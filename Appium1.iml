@@ -10,5 +10,6 @@
     <orderEntry type="library" name="selenium-server-standalone-3.0.1 (1)" level="project" />
     <orderEntry type="library" name="client-combined-3.0.1-nodeps" level="project" />
     <orderEntry type="library" name="jcommander" level="project" />
+    <orderEntry type="library" name="java-client-3.4.1" level="project" />
   </component>
 </module>

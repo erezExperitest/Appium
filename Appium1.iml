@@ -7,9 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="selenium-server-standalone-3.0.1 (1)" level="project" />
-    <orderEntry type="library" name="client-combined-3.0.1-nodeps" level="project" />
+    <orderEntry type="library" name="java-client-5.0.0-BETA1-sources" level="project" />
     <orderEntry type="library" name="jcommander" level="project" />
-    <orderEntry type="library" name="java-client-3.4.1" level="project" />
+    <orderEntry type="library" name="selenium-server-standalone-3.0.1 (1)" level="project" />
+    <orderEntry type="library" name="java-client-4.1.2" level="project" />
   </component>
 </module>

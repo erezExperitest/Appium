@@ -63,8 +63,15 @@ public class eribank {
         swipeDown();
         swipeDown();
         driver.findElement(By.xpath("//*[@text='Mexico']")).click();
-        driver.findElement(By.id("com.experitest.ExperiBank:id/cancelButton")).click();
-        driver.findElement(By.id("com.experitest.ExperiBank:id/logoutButton")).click();
+//        driver.findElement(By.xpath("//*[@text='Colombia']")).click();
+//        driver.findElement(By.xpath("//*[@text='Colombia']")).click();
+//        driver.findElement(By.xpath("//*[@text='Cancel']")).click();
+//        driver.findElement(By.xpath("//*[@text='Logout']")).click();
+
+        System.out.println(driver.getPageSource());
+//        driver.findElement(By.id("com.experitest.ExperiBank:text/Mexico")).click();
+//        driver.findElement(By.id("com.experitest.ExperiBank:id/cancelButton")).click();
+//        driver.findElement(By.id("com.experitest.ExperiBank:id/logoutButton")).click();
 
     }
 

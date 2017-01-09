@@ -28,7 +28,7 @@ import io.appium.java_client.TouchAction;
 //import org.openqa.selenium.remote.CapabilityType;
 
 
-public class eriban {
+public class eribank {
     AndroidDriver driver;
 
     @BeforeClass

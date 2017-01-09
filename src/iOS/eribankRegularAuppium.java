@@ -67,7 +67,7 @@ public class eribankRegularAuppium {
             driver.closeApp();
             long iteratioEndTime = System.currentTimeMillis();
             long iteratioTime = iteratioEndTime - iteratioStartTime;
-            System.out.println("Iteration took: " + iteratioTime / 1000);
+            System.out.println("Iteration took: " + iteratioTime / 1000 + " seconds");
             iterationsTimeList.add(iteratioTime);
 
         }
@@ -76,7 +76,7 @@ public class eribankRegularAuppium {
         System.out.println("----------------------------------------------------------------------------------");
         System.out.println(this.getClass().getName());
         System.out.println(i + " itarations took " + totalrunningTime + " seconds");
-        System.out.println("avarage time per iteration was: " + (totalrunningTime / i));
+        System.out.println("avarage time per iteration was: " + (totalrunningTime / i) + " seconds");
         System.out.println("----------------------------------------------------------------------------------");
 
     }

@@ -2,6 +2,7 @@ package iOS;
 
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.After;
@@ -45,9 +46,13 @@ public class eribankRegularAuppium {
     @Test
     public void test() throws Exception {
 //		System.out.println(driver.getPageSource());
-        long startTime = System.currentTimeMillis();
+        ArrayList<Long> iterationsTimeList = new ArrayList<Long>();
+//        long startTime = System.currentTimeMillis();
+        driver.closeApp();
         int i;
         for (i = 0; i < 10; i++) {
+            long iteratioStartTime = System.currentTimeMillis();
+            driver.launchApp();
             driver.findElement(By.name("usernameTextField")).clear();
             driver.findElement(By.name("usernameTextField")).sendKeys("company");
             driver.findElement(By.name("passwordTextField")).clear();
@@ -59,12 +64,19 @@ public class eribankRegularAuppium {
             driver.findElement(By.name("cancelButton")).click();
             driver.findElement(By.name("logoutButton")).click();
 //        System.out.println(driver.getPageSource());
+            driver.closeApp();
+            long iteratioEndTime = System.currentTimeMillis();
+            long iteratioTime = iteratioEndTime - iteratioStartTime;
+            System.out.println("Iteration took: " + iteratioTime / 1000);
+            iterationsTimeList.add(iteratioTime);
+
         }
-        long tottalTime = (System.currentTimeMillis() - startTime) / 1000;
+//        long tottalTime = (System.currentTimeMillis() - startTime) / 1000;
+        long totalrunningTime = iterationsTimeList.stream().mapToLong(Long::longValue).sum() / 1000;
         System.out.println("----------------------------------------------------------------------------------");
         System.out.println(this.getClass().getName());
-        System.out.println(i + " itarations took " + tottalTime + " seconds");
-        System.out.println("avarage time per iteration was: " + (tottalTime / i));
+        System.out.println(i + " itarations took " + totalrunningTime + " seconds");
+        System.out.println("avarage time per iteration was: " + (totalrunningTime / i));
         System.out.println("----------------------------------------------------------------------------------");
 
     }

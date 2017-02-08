@@ -26,22 +26,22 @@ public class RESET {
     public void setUp() throws MalformedURLException{
         //Set up desired capabilities and pass the Android app-activity and app-package to Appium
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", "D:\\Program Files (x86)\\Experitest\\SeeTest-Trunk\\bin\\ipas\\EriBank.apk");
+        capabilities.setCapability("app", "/Applications/STA/SeeTest-Trunk/bin/ipas/EriBank.apk");
         capabilities.setCapability("deviceName","Emulator");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("appPackage","com.experitest.ExperiBank");
         capabilities.setCapability("appActivity","com.experitest.ExperiBank.LoginActivity");
         capabilities.setCapability(MobileCapabilityType.FULL_RESET,true);
-        capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
-        driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+//        capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        driver = new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
     }
 
     @Test
     public void restart() throws Exception {
 //driver.launchApp();
-        org.junit.Assert.assertEquals(true,doPayment());
+//        org.junit.Assert.assertEquals(true,doPayment());
         driver.resetApp();
-        org.junit.Assert.assertEquals(true,chackForBalanceChange());
+//        org.junit.Assert.assertEquals(true,chackForBalanceChange());
 
         Thread.sleep(1000);
 

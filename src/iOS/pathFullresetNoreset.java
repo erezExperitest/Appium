@@ -36,8 +36,8 @@ public class pathFullresetNoreset {
         capabilities.setCapability("xcodeConfigFile", "/Users/erez.akri/Documents/untitled folder/appium-xcuitest--driver-master"
                 + "/WebDriverAgent/Config.xcconfig");
         capabilities.setCapability("realDeviceLogger", "/usr/local/lib/node_modules/deviceconsole");
-        capabilities.setCapability(MobileCapabilityType.FULL_RESET, true);
-        capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
+        capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+//        capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
         driver = new IOSDriver(new URL("http://0.0.0.0:4723/wd/hub"), (Capabilities) capabilities);
 
 

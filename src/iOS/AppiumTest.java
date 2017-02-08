@@ -26,7 +26,7 @@ public class AppiumTest {
         capabilities.setCapability(CapabilityType.VERSION, "6.1");
         capabilities.setCapability(CapabilityType.PLATFORM, "Mac");
         capabilities.setCapability("app","/Users/username/Downloads/InternationalMountains/build/Release-iphonesimulator/InternationalMountains.app");
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
     }
 
     @AfterMethod

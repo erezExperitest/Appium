@@ -54,15 +54,15 @@ public class eribank {
 
     @Test
     public void testCal() throws Exception {
-        driver.getPageSource();
+//        driver.getPageSource();
         driver.findElement(By.id("com.experitest.ExperiBank:id/usernameTextField")).sendKeys("company");
         driver.findElement(By.id("com.experitest.ExperiBank:id/passwordTextField")).sendKeys("company");
         driver.findElement(By.id("com.experitest.ExperiBank:id/loginButton")).click();
         driver.findElement(By.id("com.experitest.ExperiBank:id/makePaymentButton")).click();
         driver.findElement(By.id("com.experitest.ExperiBank:id/countryButton")).click();
-        swipeDown();
-        swipeDown();
-        driver.findElement(By.xpath("//*[@text='Mexico']")).click();
+//        swipeDown();
+//        swipeDown();
+//        driver.findElement(By.xpath("//*[@text='Mexico']")).click();
 //        driver.findElement(By.xpath("//*[@text='Colombia']")).click();
 //        driver.findElement(By.xpath("//*[@text='Colombia']")).click();
 //        driver.findElement(By.xpath("//*[@text='Cancel']")).click();

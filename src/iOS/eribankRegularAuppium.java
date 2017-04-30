@@ -26,7 +26,7 @@ public class eribankRegularAuppium {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("app", "/Applications/STA/SeeTest-Trunk/bin/ipas/EriBankO.ipa");
         capabilities.setCapability("platformName", "IOS");
-        capabilities.setCapability("udid", "f759ec5d8343175b2c68f856c9c47559aa1fc0fc");
+        capabilities.setCapability("udid", "cbc20b1088c65f4a27dca70b158843f69f249a64");
         capabilities.setCapability("deviceName", "Ipad");
         capabilities.setCapability("bundleId", "com.experitest.ExperiBankO");
         capabilities.setCapability("noReset", true);
@@ -61,14 +61,14 @@ public class eribankRegularAuppium {
             driver.findElement(By.name("passwordTextField")).sendKeys("company");
             driver.findElement(By.name("loginButton")).click();
 //        driver.findElement(By.xpath("//*/*[@class='UIAStaticText'][2]")).;
-//        System.out.println(driver.getPageSource());
-        driver.findElement(By.name("makePaymentButton")).click();
-        driver.findElement(By.name("countryButton")).click();
-        driver.findElement(By.name("Colombia")).click();
+////        System.out.println(driver.getPageSource());
+//        driver.findElement(By.name("makePaymentButton")).click();
+//        driver.findElement(By.name("countryButton")).click();
+//        driver.findElement(By.name("Colombia")).click();
 //        System.out.println(driver.getPageSource());
 //            driver.findElement(By.name("cancelButton")).click();
 //            driver.findElement(By.name("logoutButton")).click();
-//        System.out.println(driver.getPageSource());
+        System.out.println(driver.getPageSource());
 //            driver.closeApp();
 //            long iteratioEndTime = System.currentTimeMillis();
 //            long iteratioTime = iteratioEndTime - iteratioStartTime;

@@ -23,8 +23,9 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class Safari {
     private AppiumDriver driver;
-    private final String UDID = "36f0a41a8fca9263c1f977b915dcb5668a0b83fc";
+    //    private final String UDID = "36f0a41a8fca9263c1f977b915dcb5668a0b83fc";
     private Process webkitProcess;
+    static ThreadLocal<String> UDID = new ThreadLocal<>();
 
 
     @Before
@@ -32,7 +33,7 @@ public class Safari {
 //        webkitProcess = startWebKit(UDID);
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "IOS");
-        capabilities.setCapability("udid", UDID);
+        capabilities.setCapability("udid", UDID.get());
         capabilities.setCapability("deviceName", "Ipad");
 //        capabilities.setCapability("bundleId", "com.apple.Preferences");
 //        capabilities.setCapability("bundleId", "com.apple.mobilesafari");

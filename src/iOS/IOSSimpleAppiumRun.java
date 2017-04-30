@@ -3,6 +3,7 @@ package iOS;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -16,12 +17,13 @@ public class IOSSimpleAppiumRun {
 
     //private static IOSDriver<WebElement> driver;
     private static IOSDriver<IOSElement> driver;
-    final static String[] ERIBANK_PROP = {"EriBankO.ipa", "com.experitest.ExperiBankO", ".LoginActivity"};
+    final static String[] ERIBANK_PROP = {"EriBank.ipa", "com.experitest.ExperiBank", ".LoginActivity"};
+
 
 
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
         File classpathRoot = new File(System.getProperty("user.dir"));
-        File appDir = new File(classpathRoot, "/Apps/");
+        File appDir = new File(classpathRoot, "");
         File app = new File(appDir, ERIBANK_PROP[0]);
         //File app = new File(appDir, ERIBANK_PROP[0]);
 
@@ -31,11 +33,13 @@ public class IOSSimpleAppiumRun {
         // Name of mobile web browser to automate. It should be an empty string, as we are automation an app
         capabilities.setCapability("platformName", "iOS");
         capabilities.setCapability("deviceName", "iPhone");
-        capabilities.setCapability("udid", "36f0a41a8fca9263c1f977b915dcb5668a0b83fc");
+        capabilities.setCapability("udid", "3e9b544065a89d2124822900206b4ab36de335c9");
         capabilities.setCapability("platformVersion", "10.1.1");
         capabilities.setCapability("app", app.getAbsolutePath());
         capabilities.setCapability("bundleId", ERIBANK_PROP[1]);
         capabilities.setCapability("automationName", "XCUITest");
+        capabilities.setCapability("xcodeConfigFile", "/Users/erez.akri/Documents/untitled folder/appium-xcuitest--driver-master"
+                + "/WebDriverAgent/Config.xcconfig");
         capabilities.setCapability("realDeviceLogger", "/usr/local/lib/node_modules/deviceconsole/deviceconsole");
 
 //		capabilities.setCapability("xcodeConfigFile", "/Users/Mac10/xcodeConfigFile");
@@ -45,9 +49,13 @@ public class IOSSimpleAppiumRun {
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 
         //driver.findElementByXPath("//*[@id='usernameTextField']").sendKeys("company");
-        driver.findElement(By.name("usernameTextField")).sendKeys("company");
-        driver.findElement(By.name("passwordTextField")).sendKeys("company");
-        driver.findElement(By.name("loginButton")).click();
+        //driver.findElement(By.name("usernameTextField")).sendKeys("company");
+        //driver.findElement(By.name("passwordTextField")).sendKeys("company");
+        //driver.findElement(By.name("loginButton")).click();
+        List<IOSElement> findElementsByClassNameUITextFieldLabel = driver.findElementsByClassName("UITextFieldLabel");
+        for (IOSElement element : findElementsByClassNameUITextFieldLabel) {
+            element.sendKeys("company");
+        }
 
         //	driver.findElement(By.xpath("xpath=//*[@accessibilityLabel='Username']")).sendKeys("company");
         //driver.findElementById("com.experitest.ExperiBank:id/usernameTextField").sendKeys("company");
